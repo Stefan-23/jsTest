@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.all.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+        <a class="navbar-brand" href="#">Project Managment</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" > </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hi Developer</a>
+                </li>
+                </ul>
+        </div>
+      </nav>
+      <div class="d-flex justify-content-center"><h2>Projects</h2></div>
+
+          <div class="container mt-4">
+                
+            
+            <div class="grid-stack">
+                
+                <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                  <div class="grid-stack-item-content">
+
+                    <div class="card bg-dark text-white border-0">
+                        <div class="img-animation">
+                            <div class="brighten"><img src="images/project.png" alt="" class="card-img-top" height="200px" ></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                                <p class="card-text text-justify">Hey this is first project</p>
+                                <div class="form-group">
+                                    <label for="tag">Add tag:</label>
+                                    <input type="text" class="form-control" id="txtVal" name="tag">
+                                    <ul id="result">
+                                            
+                                    </ul>
+                                  </div>
+                                  <button onclick="addFirstTag()" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>  
+                  </div>
+                </div>
+
+                <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                    <div class="grid-stack-item-content">
+  
+                      <div class="card bg-dark text-white border-0">
+                          <div class="img-animation">
+                              <div class="brighten"><img src="images/project2.png" alt="" class="card-img-top" height="200px" ></div>
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">Project 2</h5>
+                                  <p class="card-text text-justify">Hey this is first project</p>
+                                  <div class="form-group">
+                                    <label for="tag">Add tag:</label>
+                                    <input type="text" class="form-control" id="txtVal2" name="tag">
+                                        <ul id="result2">
+
+                                        </ul>
+                                  </div>
+                                <button onclick="addSecondTag()" class="btn btn-primary">Add</button>
+                          </div>
+                      </div>  
+                    </div>
+                  </div>
+
+                  <div class="grid-stack-item" data-gs-x="10" data-gs-y="0" data-gs-width="4" data-gs-height="6">
+                    <div class="grid-stack-item-content">
+  
+                      <div class="card bg-dark text-white border-0">
+                          <div class="img-animation">
+                              <div class="brighten"><img src="images/project3.png" alt="" class="card-img-top" height="200px" ></div>
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">Project 3</h5>
+                                  <p class="card-text text-justify">Hey this is first project</p>
+                                  <div class="form-group">
+                                    <label for="tag">Add tag:</label>
+                                    <input type="text" class="form-control" id="txtVal3" name="tag">
+                                    <ul id="result3">
+                                            
+                                    </ul>
+                                  </div>
+                                  <button onclick="addThirdTag()" class="btn btn-primary">Add</button>
+                          </div>
+                      </div>  
+                    </div>
+                  </div>
+              </div>
+              </div>
+      </div>
+     
+      
+
+    </body>
+    <script src="main.js"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

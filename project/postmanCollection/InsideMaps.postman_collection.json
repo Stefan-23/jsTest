@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "e3c27f54-afc6-4cd0-94b7-2938491e0533",
+		"name": "InsideMaps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SessionToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4416816a-62c4-4b49-ac68-94fa001561b6",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"sessionToken\", jsonData.data);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IkRISGR6bkVBZFIiLCJpYXQiOjE1ODQ2NDU0NDQsImV4cCI6MTYxNjE4MTQ0NH0.2elgjfITAYtFArxidHap0QiI-wZEjNL2WsAtDMoyZ_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/sessionToken",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sessionToken"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "Projects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/organizations/DHHdznEAdR/projects?status=all",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"organizations",
+								"DHHdznEAdR",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/projects/DPd57dbUIE",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"projects",
+								"DPd57dbUIE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organizations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/organizations",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/organizations/DHHdznEAdR",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"organizations",
+								"DHHdznEAdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Packages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.insidemaps.com/api/v2/organizations/DHHdznEAdR/packages",
+							"protocol": "https",
+							"host": [
+								"www",
+								"insidemaps",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"organizations",
+								"DHHdznEAdR",
+								"packages"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sessionToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n\t\"name\" : \"Test name 2\",\n    \"package\" : \"Floor Plan\",\n    \"address\" : {\n        \"street\" : \"Test street 1\",\n        \"city\" : \"Test city 1\",\n        \"zip\" : \"Test zip 1\",\n        \"state\" : \"Test state 1\",\n        \"country\" : \"Test country 1\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}{{version}}organizations/{{orgId1}}/projects?name=Test name 1&package=Test package 1&address",
+							"host": [
+								"{{host}}{{version}}organizations"
+							],
+							"path": [
+								"{{orgId1}}",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Test name 1"
+								},
+								{
+									"key": "package",
+									"value": "Test package 1"
+								},
+								{
+									"key": "address",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
